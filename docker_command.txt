@@ -1,0 +1,65 @@
+docker run -it <image-id>
+
+docker run -itd <image-id>
+
+docker ps -a  or sudo docker container ls -a   --->list of container
+
+docker start  <container-id> 
+
+docker ps  -->  process status
+
+docker attach <container-id> 
+
+ctrl pq -->run the terminal  without the close
+
+docker run -itd f63181f19b2f -->Connect a container to a network (--network)
+
+sudo docker exec -it 2018ec3ae8ed /bin/bash  -->for logging into/accessing the container,one can use the exec command.
+
+sudo docker run -itd --name production1 f1f2e1b734be(rename change process)
+
+sudo docker kill 2018ec3ae8ed (stop container)
+
+sudo docker images -q (display the only images-id)
+
+sudo docker ps -q   (display the only container-id)
+
+sudo docker stop bf71b4225576  (stop the server)
+
+how to remove container in docker(https://phoenixnap.com/kb/remove-docker-images-containers-networks-volumes)
+
+sudo docker kill $(sudo docker ps -a)  or sudo docker container stop $(sudo docker container ls -aq)    -->all container stop at time
+ 
+sudo docker rm $(sudo docker ps -a)    or sudo docker container rm $(sudo docker container ls -aq)       -->all container remove at time
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
