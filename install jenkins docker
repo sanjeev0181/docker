@@ -1,0 +1,2 @@
+docker pull jenkins/jenkins
+docker run -it --name myfirtsjenkins -p 8080:8080 jenkins/jenkins
