@@ -1,0 +1,141 @@
+What is Docker Compose?
+
+Compose is a tool for defining and running multi-container docker application.
+With Compose, you use a Compose file to configure your application's service.
+Then,using a single command,you create and start all the services from your configuration
+
+Compose has commands for managing the whole lifecycle of your application:
+1) start,stop and rebuild services
+2)View the status of running services
+3)Strem the log output of running services
+4)Docker compose uses a configuration file, where you fine all the different stuffs we perform on command into a file.
+5)The File is basically an yaml file (.yml)
+6)Default file is docker-compose.yml
+
+
+
+
+syntax:- docker-compose -f <ComposeFile><Options><ServiceName>
+
+
+1) Create and Start  Containers(defaults to interactive mode)
+
+docker-compose up
+
+2) Create and Start Containers on detach mode
+
+docker-compose up -d
+
+3) Create and Start Specific Services & its Containers
+
+docker-compose up -d<service>
+
+Example:-
+
+docker-compose up -d one
+docker-compose up -d two
+
+
+
+4) List Containers
+
+docker-compose ps<service>
+
+example:-
+
+docker-compose ps one
+
+5)Stop and Remove Containers
+
+docker-compose down <service>
+
+
+6)List Images(running services only)
+docker-compose Images
+
+
+7)Build or rebuild services
+docker-compose build <service>
+
+8) views output from Containers
+docker-compose logs -f <service>
+
+9) Stop Service
+
+docker-compose stop <service>
+
+10) Remove Stopped Containers
+docker-compose rm <service>
+
+
+11)Execute a command in a running container(defaults interactively)
+docker-compose exec <service> <command>
+
+Example:-
+docker-compose exec one /bin/bash
+
+ps -ef
+
+
+exit
+
+docker-compose exec one /bin/bash
+
+ps -ef
+
+exit
+
+12)Execute a command in detached mode
+docker-compose exec -d <service> <cmd>
+
+
+Example:-
+docker-compose exec -d two host
+
+
+
+13)Scale Containers for a service
+docker-compose up -d --scale <service>=<Num>
+
+
+Example:-
+
+docker-compose up -d --scale one=2
+
+14)Use a different file
+docker-compose -f <composefile> up -d
+
+
+Example:-
+
+docker-compose -f ./artifactoryoss.yml up -d 
+
+
+=====================
+
+Example:-2
+docker run -d --name myapachecont -p 80:80 -v /var/www:/var/www --restart=always mypache
+
+
+netstat -an | grep 80
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
