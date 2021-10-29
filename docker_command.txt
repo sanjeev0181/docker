@@ -34,6 +34,8 @@ sudo docker rm $(sudo docker ps -a)    or sudo docker container rm $(sudo docker
 
 docker rmi <images_id>  --> all images remove at time
 
+docker run --name tesl10 -d ubuntu /bin/sh -c "while true; do echo Hello Aditya; sleep 8;done"
+
 
 
 
