@@ -32,7 +32,7 @@ sudo docker kill $(sudo docker ps -a)  or sudo docker container stop $(sudo dock
  
 sudo docker rm $(sudo docker ps -a)    or sudo docker container rm $(sudo docker container ls -aq)       -->all container remove at time
 
-
+docker rmi <images_id>  --> all images remove at time
 
 
 
