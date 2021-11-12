@@ -1,0 +1,66 @@
+write your 1st Docker File
+
+FRom : To pull the base image
+
+RUN: To execute commands
+
+CMD:To provide defaults for an executing container
+
+ENTRYPOINT: To configure a conatiner that will run as an executable
+
+WORKDIR: To sets the working directory
+
+COPY : TO copy a directory from local machine to the docker container
+
+ADD : To copy  file and folders from your local machine to docker containers
+
+EXPOSE : Inform Docker that the container listens on the specified network ports at runtime
+
+ENV: To set environment variables
+
+Install tomcat on ubuntu
+
+
+pull ubuntu from dockerhub
+
+Install java
+
+Create /opt/tomcat directory
+
+change work directory to /opt/tomcat
+
+Download tomcat pkg
+
+Extract tar.gz file
+
+Rename to tomcat directory
+
+Tell to docker that it run on port 8080
+
+Start tomcat services
+
+
+
+DockerFile 
+
+FROM centos:latest
+RUN yum install java -y 
+RUN mkdir /opt/tomcat
+WORKDIR   /opt/tomcat
+ADD https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.72/bin/apache-tomcat-8.5.72.tar.gz  .
+RUN tar -xvzf apache-tomcat-8.5.72.tar.gz
+RUN mv apache-tomcat-8.5.72/*  /opt/tomcat
+EXPOSE 8080
+COPY ./funds-1.0-SNAPSHOT.war  /opt/tomcat/webapps
+CMD  ["/opt/tomcat/bin/catlina.sh","run]
+
+
+
+
+save
+
+docker run -it sanjeev0181/tomcat8
+docker container run -it -d --name tomcatcontainer01 -p 8081:8080 sanjeev0181/mytomcat1 daec2172805776f60adc510bd4e0881c64de92677fab6749a2f6831d2890cb6c
+
+
+
