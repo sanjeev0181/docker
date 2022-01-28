@@ -5,9 +5,20 @@ Image Management
 Container Orchestration
 
 
-What is the docker?  (https://www.docker.com/resources/what-container -: reference_url)
+What is the docker?  
+Docker is a platform for developing,shipping & running applications using an open-source container based technology
+OS level virtualization
+Run everywhere-physical or virtual or cloud
+Run anything-if it can run on host,it can run in the container
 
-What are Containers?
+Scalable-lightweight
+Portable-Docker'd Apps can run anywhere
+You don't have to pre-allocate any Ram
+Docker ensures your applications and resources are isolated and segregated
+Environment Standardization and version control
+
+
+What are Containers? (https://www.docker.com/resources/what-container -: reference_url)
 Software process created using os virtualization which holds specific environment.
 
 
