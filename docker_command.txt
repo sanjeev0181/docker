@@ -54,6 +54,23 @@ docker run --name tesl10 -d ubuntu /bin/sh -c "while true; do echo Hello Aditya;
 
 
 
+Ensuring Docker is ready
+--> docker info
+
+Docker run command
+--> docker run <options>
+
+If image is not available on localhost,download it from DockerHub.
+Create new Container
+Assign a Unique ID to the container
+Start the container
+Attach the container to the terminal interactively
+Run the first command
+
+
+
+
+
 
 
 
