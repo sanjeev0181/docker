@@ -1,0 +1,28 @@
+#This Command is used to stop th docker daemon process.
+#A message showing that the docker process has stopped.
+service docker stop 
+
+#start
+#A message showing that the docker process has started.
+service docker start
+
+
+docker inspect 
+**************************************
+nsenter
+This method allows one to attach to a container without exiting the container.
+
+syntax:-
+nsenter -m -u -n -p -i -t containerID command
+
+-u is used to mention the Uts namespace
+-m is used to mention the mount namespace
+-n is used to mention the network namespace
+-p is used to mention the process namespace
+-t s used to connect the I/O streams of the container to the host OS.
+-i s to make the container run in interactive mode.
+containerID - the is the ID of the container.
+commands :- this is the command to run within the container.
+
+Example:-
+nsenter -m -u -n -p -i -t 2978 /bin/bash
