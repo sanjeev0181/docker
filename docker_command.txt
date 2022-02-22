@@ -10,7 +10,17 @@ docker ps  -->  process status
 
 docker images -q  --> show only image ID's
 
-docker attach <container-id> 
+docker history centos  --> the above command will show all the commands that were run against the centos image.
+
+docker inspect jenkins  --> show detailed information on image.   syntax:- docker inspect repository   Repository:-This is the name of the images.
+
+docker top ContainerID  --> with this command,you can see the top processes within a container.  ContainersID:- container ID for which you want to see the top processes.
+
+docker pause ContainerID -->  the above command will pause the processes in a running container.
+
+docker unpause ContainerID --> the above command will unpause the processes in a running container.
+
+docker attach <container-id> --> attach to a running container.
 
 ctrl pq -->run the terminal  without the close
 
