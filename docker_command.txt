@@ -8,6 +8,8 @@ docker start  <container-id>
 
 docker ps  -->  process status
 
+docker images -q  --> show only image ID's
+
 docker attach <container-id> 
 
 ctrl pq -->run the terminal  without the close
