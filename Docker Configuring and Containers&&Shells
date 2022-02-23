@@ -12,6 +12,12 @@ docker inspect
 nsenter
 This method allows one to attach to a container without exiting the container.
 
+docker run -it centos /bin/bash
+
+docker run --rm -v /usr/local/bin:/target jpetazzo/nserter
+
+docker inspect df8a85bb31e6 | grep Pid
+
 syntax:-
 nsenter -m -u -n -p -i -t containerID command
 
@@ -26,3 +32,8 @@ commands :- this is the command to run within the container.
 
 Example:-
 nsenter -m -u -n -p -i -t 2978 /bin/bash
+
+issuse:-
+nsenter: loadlocale.c:129: _nl_intern_locale_data: Assertion `cnt < (sizeof (_nl_value_type_LC_TIME) / sizeof (_nl_value_type_LC_TIME[0]))' failed
+#resolve the issuse
+https://suay.site/?p=1460
