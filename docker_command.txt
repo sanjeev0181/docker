@@ -1,3 +1,7 @@
+docker commands list reference
+https://phoenixnap.com/kb/list-of-docker-commands-cheat-sheet
+
+
 docker run -it <image-id>
 
 docker run -itd <image-id>
