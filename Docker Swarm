@@ -8,3 +8,5 @@ docker node ls
 docker network ls
 docker service create --replicas 5 -p 80:80  --name testingnginx nginx
 docker service ps testingnginx
+docker service scale testingnginx=10
+ docker service update --image nginx:1.14.1 testingnginx
