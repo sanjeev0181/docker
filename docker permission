@@ -11,3 +11,9 @@ Got permission denied while trying to connect to the Docker daemon socket at uni
 dial unix /var/run/docker.sock: connect: permission denied
 
 jenkins ALL=(ALL) NOPASSWD: ALL
+
+Error response from daemon: This node is already part of a swarm. Use "docker swarm leave" to leave this swarm and join another one.
+docker swarm leave --force
+
+Error response from daemon: Timeout was reached before node joined. The attempt to join the swarm will continue in the background. Use the "docker info" command to see the current swarm status of your node.
+add the port number
