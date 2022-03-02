@@ -1,0 +1,10 @@
+step 1:-
+#install docker 
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+
+docker node ls
+docker network ls
+docker service create --replicas 5 -p 80:80  --name testingnginx nginx
+docker service ps testingnginx
