@@ -3,10 +3,24 @@ step 1:-
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 
-
+docker info | grep -i swarm
+docker swarm init
 docker node ls
 docker network ls
+#create service
+docker service create --name <Name> --replicas <#> -p <HP:CP> IMAGE
+docker service create -p 80:80 --name web nginx
 docker service create --replicas 5 -p 80:80  --name testingnginx nginx
 docker service ps testingnginx
+
+#docker service scaleup and scaledown
 docker service scale testingnginx=10
- docker service update --image nginx:1.14.1 testingnginx
+
+#details about service
+docker service insepect --pretty <servicename>
+docker inspect <current id>
+docker inspect 6p3dbwn6w96 | grep ContainerID
+#Deleting a service
+docker service rm <servicename>
+
+docker service update --image nginx:1.14.1 testingnginx
