@@ -24,3 +24,11 @@ docker inspect 6p3dbwn6w96 | grep ContainerID
 docker service rm <servicename>
 
 docker service update --image nginx:1.14.1 testingnginx
+
+
+#Managing Nodes
+docker node inspect --pretty <Node>
+docker node promote <ip address>
+docker node demote
+docker node update --availability drain <Node>
+docker node update --availability active <Node>
