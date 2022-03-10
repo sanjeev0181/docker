@@ -1,0 +1,28 @@
+docker volume
+docker run -it -p 8081:8080 -v path/of/hostnamachine:/containerpath --name containername imagename
+
+#remove container automatic
+docker run --rm -it -p 8081:8080 -v path/of/hostnamachine:/containerpath --name containername imagename
+
+#create independent volume
+docker volume create --name mydate
+
+docker run -it --rm -v mydate:/c_mydate ubuntu
+
+echo "this is sample data written in container" > /c_mydate/Example.txt
+
+docker volume inspect mydate
+
+#Creating a volume that persists when the container is removed.
+
+docker run -ti --name=Container2 -v mydate2:/c_date2 ubuntu
+echo "this is sample data written in container" > /c_mydate2/Example2.txt
+
+
+#docker rm volume commads
+docker volume rm mydate2
+docker volume ls
+
+
+#create a volume from an existin directory with data
+docker run -it -v mydate3:/var ubuntu
