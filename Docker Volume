@@ -1,3 +1,9 @@
+Docker volumes are directories and files that exist on the host file system outside of the Docker container. 
+These volumes are used to persist data and share data between Docker containers.
+Docker supports the mounting of one or more data volumes from the host OS to the Docker container.
+
+
+
 docker volume
 docker run -it -p 8081:8080 -v path/of/hostnamachine:/containerpath --name containername imagename
 
