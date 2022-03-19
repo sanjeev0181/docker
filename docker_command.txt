@@ -2,6 +2,8 @@ docker commands list reference
 https://phoenixnap.com/kb/list-of-docker-commands-cheat-sheet
 
 https://www.cyberithub.com/40-ultimate-docker-commands-with-examples-cheat-sheet/
+#serach image on termeral
+docker search <imagename>
 
 docker run -it <image-id>
 
