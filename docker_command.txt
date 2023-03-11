@@ -11,6 +11,8 @@ docker run -itd <image-id>
 
 docker ps -a  or sudo docker container ls -a   --->list of container
 
+docker ps -a --no-trunc 
+
 docker start  <container-id> 
 
 docker ps  -->  process status
