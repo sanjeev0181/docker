@@ -40,3 +40,13 @@ We should have Dockerfile available in the directory where we run docker build c
 ADD and COPY does the same, copying the files from local to container. But ADD has some extra capabilities.
 1. ADD can download the resources from internet to Container.
 2. ADD can directly direct unzip the file into container if it is recognized format.
+
+
+### CMD
+
+CMD is the instruction that runs the container. It should run in foreground and it should run for infinite time.
+
+### RUN vs CMD
+
+* RUN command will execute at the time of image creation.
+* CMD command will execute at the time of running container.
